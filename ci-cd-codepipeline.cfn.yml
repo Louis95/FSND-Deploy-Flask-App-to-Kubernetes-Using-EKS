@@ -7,7 +7,7 @@ Description: EKSWSV1
 Parameters:
 
   EksClusterName:
-    Type: String
+    Type: simple-jwt-api
     Description: The name of the EKS cluster created
     Default: 
     MinLength: 1
@@ -31,7 +31,7 @@ Parameters:
     ConstraintDescription: You must enter a GitHub repository branch name
 
   GitHubToken:
-    Type: String
+    Type: c233a3138b78c101c071232a4a7662aea9b6ff5a 
     NoEcho: true
     Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
     MinLength: 3
@@ -39,7 +39,7 @@ Parameters:
     ConstraintDescription: You must enter a GitHub personal access token
 
   GitHubUser:
-    Type: String
+    Type: Louis95
     Default:
     Description: GitHub username or organization
     MinLength: 3
@@ -55,7 +55,7 @@ Parameters:
     ConstraintDescription: You must enter a CodeBuild Docker image
 
   KubectlRoleName:
-    Type: String
+    Type: UdacityFlaskDeployCBKubectlRole
     Default: 
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
