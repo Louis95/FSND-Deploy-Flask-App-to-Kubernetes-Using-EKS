@@ -39,8 +39,8 @@ Parameters:
     ConstraintDescription: You must enter a GitHub personal access token
 
   GitHubUser:
-    Type: Louis95
-    Default:
+    Type: String
+    Default: Louis95
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100

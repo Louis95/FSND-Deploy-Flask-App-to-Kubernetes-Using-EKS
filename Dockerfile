@@ -1,13 +1,12 @@
-FROM python:3.7.2-slim
+FROM python:stretch
 
-COPY . /main
-WORKDIR /main
+COPY . /app
 
-COPY ./requirements.txt /main/requirements.txt
+WORKDIR /app
+
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
 
 
-ENTRYPOINT ["python", "main.py"]
 
-EXPOSE 8080
-
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "main:APP"]
+ENTRYPOINT ["gunicorn"  , "-b", ":8080", "main:APP"]
